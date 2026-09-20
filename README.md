@@ -94,7 +94,7 @@ Examples all use the [new `nix` command](https://wiki.nixos.org/wiki/Nix_(comman
 ### Testing
 If you want to test the application out simply:
 ```bash
-nix run github:notFoxils/ntfy-desktop
+nix run github:emmaexe/ntfyDesktop
 ```
 or if you've cloned the repository
 ```bash
@@ -108,14 +108,14 @@ If you like what you see you have two options for installation:
   Add to your flake.nix
   ```nix
   {
-    inputs.ntfy-desktop.url = "github:notFoxils/ntfy-desktop";
+    inputs.ntfyDesktop.url = "github:emmaexe/ntfyDesktop";
   }
   ```
 
   Then install the package:
   ```nix
-  {pkgs, ntfy-desktop, ...}: let
-    inherit ntfy-desktop.packages.${pkgs.stdenv.hostPlatform.system}.ntfyDesktop;
+  {pkgs, ntfyDesktop, ...}: let
+    inherit ntfyDesktop.packages.${pkgs.stdenv.hostPlatform.system}.ntfyDesktop;
   in {
     environment.systemPackages = [ntfyDesktop];
     # Or just for your user
@@ -124,7 +124,7 @@ If you like what you see you have two options for installation:
   ```
 - Profiles (usually frowned upon)
   ```bash
-  nix profile add github:notFoxils/ntfy-desktop
+  nix profile add github:emmaexe/ntfyDesktop
   ```
 
 ### Manual installation
